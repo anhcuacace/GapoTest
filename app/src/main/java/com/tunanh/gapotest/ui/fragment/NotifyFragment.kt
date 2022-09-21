@@ -7,6 +7,5 @@ import com.tunanh.gapotest.ui.base.BaseFragment
 class NotifyFragment : BaseFragment<FragmentPeopleBinding>() {
     override fun layoutRes(): Int = R.layout.fragment_people
     override fun initView() {
-
     }
 }

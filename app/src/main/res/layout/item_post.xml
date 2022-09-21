@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgUserPost"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:src="@drawable/ic_avatar" />
+
+        <TextView
+            android:id="@+id/tvNameUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/imgMore"
+            app:layout_constraintStart_toEndOf="@id/imgUserPost"
+            app:layout_constraintTop_toTopOf="@id/imgUserPost"
+            tools:text="@string/user_name" />
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_more_hori"
+            app:layout_constraintBottom_toBottomOf="@id/tvNameUser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvNameUser"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tvCreatedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="@id/tvNameUser"
+            app:layout_constraintTop_toBottomOf="@id/tvNameUser"
+            tools:text="@string/time" />
+
+        <ImageView
+            android:id="@+id/imgDot"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:src="@drawable/ic_dot"
+            app:layout_constraintBottom_toBottomOf="@id/tvCreatedTime"
+            app:layout_constraintStart_toEndOf="@id/tvCreatedTime"
+            app:layout_constraintTop_toTopOf="@id/tvCreatedTime"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_privacy"
+            app:layout_constraintBottom_toBottomOf="@id/tvCreatedTime"
+            app:layout_constraintStart_toEndOf="@id/imgDot"
+            app:layout_constraintTop_toTopOf="@id/tvCreatedTime" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_text_regular"
+            android:maxLines="3"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imgUserPost" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

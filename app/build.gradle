@@ -31,10 +31,12 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding true
-        dataBinding true
+        viewBinding = true
     }
-
+    dataBinding {
+        enabled = true
+    }
+    namespace 'com.tunanh.gapotest'
 }
 
 dependencies {
@@ -60,4 +62,8 @@ dependencies {
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.13.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    //dimen
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    //circleimageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

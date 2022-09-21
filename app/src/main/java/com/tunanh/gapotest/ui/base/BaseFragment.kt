@@ -8,9 +8,13 @@ import androidx.annotation.LayoutRes
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import com.tunanh.gapotest.viewmodel.GapoViewModel
 
 abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
-    private lateinit var binding: T
+    protected lateinit var binding: T
+
+    protected lateinit var viewModel: GapoViewModel
 
     @LayoutRes
     protected abstract fun layoutRes(): Int
@@ -28,10 +32,12 @@ abstract class BaseFragment<T : ViewDataBinding> : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        binding.lifecycleOwner = viewLifecycleOwner
+        viewModel = ViewModelProvider(
+            this,
+            GapoViewModel.GapoViewModelFactory(this.activity!!.application)
+        )[GapoViewModel::class.java]
         initView()
     }
-
 
 
 }

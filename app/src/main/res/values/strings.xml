@@ -2,4 +2,20 @@
     <string name="app_name">GapoTest of tún anh</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="avatar_user">avatar user</string>
+
+    <string name="todo">TODO</string>
+    <string name="user_name">Nguyễn Quang Khôi</string>
+    <string name="time">1 phút trước</string>
+    <string name="cmt">Bình luận</string>
+    <string name="share">Chia sẻ</string>
+    <string name="name_logo">Gapo</string>
+    <string name="what_do_you_want_to_share">Bạn muốn chia sẻ điều gì?</string>
+    <string name="description_end">Đó là tất cả bài viết của tổ chức bạn.\n Làm mới lại để cập nhật bài viết mới</string>
+    <string name="refresh_page">Tải lại trang</string>
+    <string name="title_end">Bạn đã xem hết</string>
+    <string name="like">like</string>
+    <string name="answer">trả lời</string>
+
 </resources>

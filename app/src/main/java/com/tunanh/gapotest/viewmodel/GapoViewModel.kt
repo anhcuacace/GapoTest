@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 
 class GapoViewModel(application: Application) : ViewModel() {
 
+
     class GapoViewModelFactory(private val application: Application) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(GapoViewModel::class.java)) {

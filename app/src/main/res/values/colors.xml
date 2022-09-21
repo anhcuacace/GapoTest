@@ -11,4 +11,6 @@
 
     <color name="selected_color">#375464</color>
     <color name="unselected_color">#737682</color>
+    <color name="text_color">#26282C</color>
+    <color name="back_ground_end">#f1f2f4</color>
 </resources>
